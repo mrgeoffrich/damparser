@@ -1,0 +1,20 @@
+{
+  "name": "DamParser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "influx": "^5.5.1",
+    "jsdom": "^16.1.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^12.2.4"
+  }
+}
