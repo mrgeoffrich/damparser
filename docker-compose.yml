@@ -4,10 +4,18 @@ services:
   influxdb:
     image: influxdb:latest
     volumes:
-      - "influxdbdata:/var/lib/influxdb"
+      - influxdbdata:/var/lib/influxdb
     ports: 
-      8086:8086
-      2003:2003
-
+      - 8086:8086
+      - 2003:2003
+  chronograf:
+    image: chronograf:latest
+    volumes:
+      - chronographdata:/var/lib/chronograf
+    ports:
+      - "8888:8888"
+    links:
+      - influxdb
 volumes:
-  influxdbdata
+  influxdbdata:
+  chronographdata:
